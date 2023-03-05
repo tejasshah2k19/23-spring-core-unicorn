@@ -1,0 +1,49 @@
+IoC -> 
+	application context 
+		
+		getBean() // 5 -> 1 
+		
+		
+		mutable immutable 
+		
+		obj-> new copy -> immutable 
+		
+scope ->
+		singleton 
+		prototype 
+		request 
+		session
+		global-session
+		
+		
+Employee class	 
+		name 
+		salary 
+		Address 
+			
+Address class 	 
+	addressLine
+	city 
+	
+	
+SessionController 
+			signup() -> input save 
+				UserDao 
+					PreparedStatement 
+						Connection 
+						
+						
+						new 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

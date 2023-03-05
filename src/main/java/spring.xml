@@ -4,8 +4,22 @@
 	xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean class="com.controller.UserController" name="uc"></bean>
+	<bean class="com.controller.UserController" name="uc"
+		scope="prototype"></bean>
 
-	<bean class="com.controller.AdminController" name="ac"></bean>
+	<bean class="com.controller.AdminController" name="ac"
+		scope="singleton"></bean>
 
+	<bean class="com.controller.SessionController" name="sc">
+		<constructor-arg ref="userDao"></constructor-arg>
+		<property name="adminDao" ref="ado"></property>
+	</bean>
+	<bean class="com.dao.UserDao" name="userDao" />
+
+
+	<bean class="com.bean.UserBean" name="userBean">
+		<property name="firstName" value="gabbar"></property>
+	</bean>
+
+	<bean class="com.dao.AdminDao" name="ado"></bean>
 </beans>
